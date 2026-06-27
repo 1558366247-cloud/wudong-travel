@@ -8,3 +8,12 @@ __pycache__/
 /tmp/
 *.log
 _claude/
+server/run/
+*.docx
+_design.txt
+_req.txt
+_report.txt
+_report_detail.txt
+_gen_report.py
+_gen_report_v2.py
+*.png
