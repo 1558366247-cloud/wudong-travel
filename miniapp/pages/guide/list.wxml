@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="page-title">交通攻略</view>
+  <picker mode="selector" range="{{departures}}" bindchange="onDepartureChange">
+    <view class="picker-btn">{{departures[departure] || '选择出发地'}}</view>
+  </picker>
+
+  <block wx:for="{{guides}}" wx:key="guideId">
+    <view class="card guide-card" bindtap="goDetail" data-id="{{item.guideId}}">
+      <view class="guide-header">
+        <text class="guide-icon">{{item.coverImage || '🚗'}}</text>
+        <view class="guide-info">
+          <view class="guide-title">{{item.title}}</view>
+          <view class="guide-meta">{{item.transportType}} | {{item.departure}} → {{item.destination}}</view>
+        </view>
+      </view>
+      <view class="guide-footer">
+        <text>⏱ {{item.duration}}</text>
+        <text wx:if="{{item.estimatedCost}}">💰 ¥{{item.estimatedCost}}</text>
+        <text class="guide-views">{{item.viewCount}}浏览</text>
+      </view>
+    </view>
+  </block>
+
+  <view class="empty-state" wx:if="{{!loading && guides.length === 0}}">
+    <text>暂无交通攻略</text>
+  </view>
+  <view class="loading" wx:if="{{loading}}"><text>加载中...</text></view>
+</view>

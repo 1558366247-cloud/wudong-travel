@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/scenic/list",
+    "pages/scenic/detail",
+    "pages/route/list",
+    "pages/route/detail",
+    "pages/route/purchase",
+    "pages/ticket/purchase",
+    "pages/order/list",
+    "pages/order/detail",
+    "pages/e-ticket/detail",
+    "pages/guide/list",
+    "pages/guide/detail",
+    "pages/user/favorites"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1F5FA8",
+    "navigationBarTitleText": "乌东文旅",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F7F8FA"
+  },
+  "tabBar": {
+    "color": "#8C8C8C",
+    "selectedColor": "#1F5FA8",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/scenic/list",
+        "text": "景区门票"
+      },
+      {
+        "pagePath": "pages/route/list",
+        "text": "路线套餐"
+      },
+      {
+        "pagePath": "pages/guide/list",
+        "text": "交通攻略"
+      },
+      {
+        "pagePath": "pages/order/list",
+        "text": "我的订单"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

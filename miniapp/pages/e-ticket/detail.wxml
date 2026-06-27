@@ -1,0 +1,49 @@
+<view class="container" wx:if="{{ticket}}">
+  <view class="eticket-card">
+    <view class="eticket-header">
+      <text class="eticket-title">🎫 乌东文旅电子票</text>
+      <text class="eticket-status" style="color:{{statusColor[ticket.status]}}">
+        {{statusMap[ticket.status]}}
+      </text>
+    </view>
+
+    <!-- 二维码区域 R9-02 -->
+    <view class="qr-section">
+      <canvas id="qrCanvas" type="2d" class="qr-canvas"></canvas>
+      <view class="qr-code-text">{{ticket.qrCode}}</view>
+    </view>
+
+    <view class="eticket-info">
+      <view class="info-row">
+        <text class="info-label">游客姓名</text>
+        <text class="info-value">{{ticket.visitorName}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">身份证号</text>
+        <text class="info-value">{{ticket.visitorIdCard || '-'}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">使用日期</text>
+        <text class="info-value">{{ticket.useDate}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">有效期至</text>
+        <text class="info-value">{{ticket.expireDate}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">票号</text>
+        <text class="info-value" style="font-size:22rpx;">{{ticket.qrCode}}</text>
+      </view>
+    </view>
+
+    <view class="eticket-tips">
+      💡 R9-05: 请在景区营业时间({ticket.useDate} 08:00-18:00)内出示此二维码进行核销
+    </view>
+  </view>
+
+  <button class="btn-primary" bindtap="previewQR">📱 全屏展示二维码</button>
+</view>
+
+<view wx:else style="text-align:center;padding:200rpx 0;color:var(--text-tertiary);">
+  加载中...
+</view>

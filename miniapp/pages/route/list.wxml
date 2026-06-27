@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 筛选 -->
+  <scroll-view scroll-x class="filter-scroll">
+    <view class="filter-group">
+      <text class="filter-label">天数：</text>
+      <block wx:for="{{durations}}" wx:key="*this">
+        <view class="filter-tag {{duration === item ? 'active' : ''}}" data-type="duration" data-value="{{item}}" bindtap="onFilterChange">
+          {{item || '全部'}}
+        </view>
+      </block>
+    </view>
+    <view class="filter-group">
+      <text class="filter-label">主题：</text>
+      <block wx:for="{{themes}}" wx:key="*this">
+        <view class="filter-tag {{theme === item ? 'active' : ''}}" data-type="theme" data-value="{{item}}" bindtap="onFilterChange">
+          {{item || '全部'}}
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <!-- 路线列表 -->
+  <block wx:for="{{routes}}" wx:key="routeId">
+    <view class="card route-card" bindtap="goDetail" data-id="{{item.routeId}}">
+      <view class="route-cover">{{item.duration}}</view>
+      <view class="route-info">
+        <view class="route-title">{{item.title}}</view>
+        <view class="route-tags">
+          <text class="tag tag-primary">{{item.duration}}</text>
+          <text class="tag tag-orange" wx:for="{{item.themes.split(',')}}" wx:for-item="t" wx:key="*this">{{t}}</text>
+        </view>
+        <view class="route-bottom">
+          <text class="price">¥{{item.price}}<text style="font-size:24rpx;color:var(--text-tertiary);font-weight:400;">/人</text></text>
+          <text class="market-price" wx:if="{{item.marketPrice}}">¥{{item.marketPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class="empty-state" wx:if="{{!loading && routes.length === 0}}">
+    <text>暂无符合条件的路线</text>
+  </view>
+  <view class="loading" wx:if="{{loading}}"><text>加载中...</text></view>
+</view>

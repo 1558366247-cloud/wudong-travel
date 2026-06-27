@@ -1,0 +1,9 @@
+.tab-scroll { white-space: nowrap; padding: 16rpx 0; margin-bottom: 16rpx; }
+.tab-item { display: inline-block; padding: 12rpx 28rpx; font-size: 26rpx; color: #595959; border-radius: 32rpx; margin-right: 12rpx; background: #F0F0F0; }
+.tab-item.active { background: #1F5FA8; color: #fff; }
+.order-card { padding: 24rpx; margin-bottom: 16rpx; }
+.order-header { display: flex; align-items: center; gap: 12rpx; margin-bottom: 12rpx; }
+.order-target { flex: 1; font-size: 30rpx; font-weight: 500; }
+.order-status { font-size: 24rpx; color: #1F5FA8; }
+.order-info { font-size: 24rpx; color: #8C8C8C; line-height: 1.8; }
+.order-actions { text-align: right; margin-top: 12rpx; }

@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <input class="search-input" placeholder="搜索景区..." bindinput="onSearchInput" value="{{keyword}}" />
+    <button class="search-btn" bindtap="onSearch">搜索</button>
+  </view>
+
+  <!-- 景区列表 -->
+  <view wx:if="{{!loading}}">
+    <block wx:for="{{scenics}}" wx:key="scenicId">
+      <view class="card scenic-card" bindtap="goDetail" data-id="{{item.scenicId}}">
+        <view class="scenic-cover">
+          <text class="scenic-icon">🏔️</text>
+        </view>
+        <view class="scenic-info">
+          <view class="scenic-name">{{item.name}}</view>
+          <view class="scenic-addr">📍 {{item.address}}</view>
+          <view class="scenic-time">🕐 {{item.openTime}}</view>
+          <view class="scenic-bottom">
+            <text class="price" wx:if="{{item.minPrice > 0}}">
+              <text class="price-symbol">¥</text>{{item.minPrice}}<text class="price-desc">起</text>
+            </text>
+            <text class="tag tag-primary">查看详情</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 空状态 -->
+    <view class="empty-state" wx:if="{{scenics.length === 0}}">
+      <text>暂无景区信息</text>
+    </view>
+  </view>
+
+  <!-- 加载中 -->
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+</view>

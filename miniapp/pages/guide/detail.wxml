@@ -1,0 +1,16 @@
+<view class="container" wx:if="{{guide}}">
+  <view class="card guide-card">
+    <view class="guide-cover">🚗</view>
+    <view class="guide-title">{{guide.title}}</view>
+    <view class="guide-meta">
+      <text class="tag tag-primary">{{guide.transportType}}</text>
+      <text>{{guide.departure}} → {{guide.destination}}</text>
+    </view>
+    <view class="guide-info">
+      <view class="guide-item">⏱ 预估时长：{{guide.duration}}</view>
+      <view class="guide-item" wx:if="{{guide.estimatedCost}}">💰 预估费用：¥{{guide.estimatedCost}}</view>
+    </view>
+    <view class="guide-content">{{guide.description}}</view>
+  </view>
+</view>
+<view wx:else style="text-align:center;padding:200rpx 0;">加载中...</view>

@@ -1,0 +1,378 @@
+[
+  {
+    "name": "Process Start",
+    "start": 1782567150932,
+    "end": 1782567156239,
+    "duration": 5307,
+    "pid": 23084,
+    "index": 0
+  },
+  {
+    "name": "Application Start",
+    "start": 1782567156240,
+    "end": 1782567156820,
+    "duration": 580,
+    "pid": 23084,
+    "index": 1
+  },
+  {
+    "name": "Load Plugin",
+    "start": 1782567156252,
+    "end": 1782567156261,
+    "duration": 9,
+    "pid": 23084,
+    "index": 2
+  },
+  {
+    "name": "Load Config",
+    "start": 1782567156261,
+    "end": 1782567156268,
+    "duration": 7,
+    "pid": 23084,
+    "index": 3
+  },
+  {
+    "name": "Require(0) config/config.default.ts",
+    "start": 1782567156262,
+    "end": 1782567156262,
+    "duration": 0,
+    "pid": 23084,
+    "index": 4
+  },
+  {
+    "name": "Require(1) C:/作业/zy5/server/node_modules/egg-session/config/config.default.js",
+    "start": 1782567156262,
+    "end": 1782567156262,
+    "duration": 0,
+    "pid": 23084,
+    "index": 5
+  },
+  {
+    "name": "Require(2) C:/作业/zy5/server/node_modules/egg-security/config/config.default.js",
+    "start": 1782567156263,
+    "end": 1782567156263,
+    "duration": 0,
+    "pid": 23084,
+    "index": 6
+  },
+  {
+    "name": "Require(3) C:/作业/zy5/server/node_modules/egg-jsonp/config/config.default.js",
+    "start": 1782567156263,
+    "end": 1782567156263,
+    "duration": 0,
+    "pid": 23084,
+    "index": 7
+  },
+  {
+    "name": "Require(4) C:/作业/zy5/server/node_modules/egg-onerror/config/config.default.js",
+    "start": 1782567156263,
+    "end": 1782567156263,
+    "duration": 0,
+    "pid": 23084,
+    "index": 8
+  },
+  {
+    "name": "Require(5) C:/作业/zy5/server/node_modules/egg/config/config.default.js",
+    "start": 1782567156263,
+    "end": 1782567156263,
+    "duration": 0,
+    "pid": 23084,
+    "index": 9
+  },
+  {
+    "name": "Require(6) C:/作业/zy5/server/node_modules/@midwayjs/web/dist/config/config.default.js",
+    "start": 1782567156266,
+    "end": 1782567156266,
+    "duration": 0,
+    "pid": 23084,
+    "index": 10
+  },
+  {
+    "name": "Require(7) config/config.default.ts",
+    "start": 1782567156267,
+    "end": 1782567156267,
+    "duration": 0,
+    "pid": 23084,
+    "index": 11
+  },
+  {
+    "name": "Require(8) C:/作业/zy5/server/node_modules/egg-security/config/config.local.js",
+    "start": 1782567156267,
+    "end": 1782567156268,
+    "duration": 1,
+    "pid": 23084,
+    "index": 12
+  },
+  {
+    "name": "Require(9) C:/作业/zy5/server/node_modules/egg/config/config.local.js",
+    "start": 1782567156268,
+    "end": 1782567156268,
+    "duration": 0,
+    "pid": 23084,
+    "index": 13
+  },
+  {
+    "name": "Require(10) C:/作业/zy5/server/node_modules/@midwayjs/web/dist/config/config.local.js",
+    "start": 1782567156268,
+    "end": 1782567156268,
+    "duration": 0,
+    "pid": 23084,
+    "index": 14
+  },
+  {
+    "name": "Load extend/application.js",
+    "start": 1782567156277,
+    "end": 1782567156294,
+    "duration": 17,
+    "pid": 23084,
+    "index": 15
+  },
+  {
+    "name": "Require(11) C:/作业/zy5/server/node_modules/egg-session/app/extend/application.js",
+    "start": 1782567156279,
+    "end": 1782567156280,
+    "duration": 1,
+    "pid": 23084,
+    "index": 16
+  },
+  {
+    "name": "Require(12) C:/作业/zy5/server/node_modules/egg-security/app/extend/application.js",
+    "start": 1782567156281,
+    "end": 1782567156283,
+    "duration": 2,
+    "pid": 23084,
+    "index": 17
+  },
+  {
+    "name": "Require(13) C:/作业/zy5/server/node_modules/egg-jsonp/app/extend/application.js",
+    "start": 1782567156284,
+    "end": 1782567156287,
+    "duration": 3,
+    "pid": 23084,
+    "index": 18
+  },
+  {
+    "name": "Require(14) C:/作业/zy5/server/node_modules/@midwayjs/web/app/extend/application.js",
+    "start": 1782567156289,
+    "end": 1782567156290,
+    "duration": 1,
+    "pid": 23084,
+    "index": 19
+  },
+  {
+    "name": "Load extend/request.js",
+    "start": 1782567156294,
+    "end": 1782567156325,
+    "duration": 31,
+    "pid": 23084,
+    "index": 20
+  },
+  {
+    "name": "Require(15) C:/作业/zy5/server/node_modules/egg/app/extend/request.js",
+    "start": 1782567156297,
+    "end": 1782567156300,
+    "duration": 3,
+    "pid": 23084,
+    "index": 21
+  },
+  {
+    "name": "Require(16) C:/作业/zy5/server/node_modules/@midwayjs/web/app/extend/request.js",
+    "start": 1782567156301,
+    "end": 1782567156321,
+    "duration": 20,
+    "pid": 23084,
+    "index": 22
+  },
+  {
+    "name": "Load extend/response.js",
+    "start": 1782567156325,
+    "end": 1782567156357,
+    "duration": 32,
+    "pid": 23084,
+    "index": 23
+  },
+  {
+    "name": "Require(17) C:/作业/zy5/server/node_modules/egg/app/extend/response.js",
+    "start": 1782567156327,
+    "end": 1782567156352,
+    "duration": 25,
+    "pid": 23084,
+    "index": 24
+  },
+  {
+    "name": "Load extend/context.js",
+    "start": 1782567156357,
+    "end": 1782567156362,
+    "duration": 5,
+    "pid": 23084,
+    "index": 25
+  },
+  {
+    "name": "Require(18) C:/作业/zy5/server/node_modules/egg-security/app/extend/context.js",
+    "start": 1782567156357,
+    "end": 1782567156357,
+    "duration": 0,
+    "pid": 23084,
+    "index": 26
+  },
+  {
+    "name": "Require(19) C:/作业/zy5/server/node_modules/egg-jsonp/app/extend/context.js",
+    "start": 1782567156358,
+    "end": 1782567156358,
+    "duration": 0,
+    "pid": 23084,
+    "index": 27
+  },
+  {
+    "name": "Require(20) C:/作业/zy5/server/node_modules/egg/app/extend/context.js",
+    "start": 1782567156358,
+    "end": 1782567156358,
+    "duration": 0,
+    "pid": 23084,
+    "index": 28
+  },
+  {
+    "name": "Require(21) C:/作业/zy5/server/node_modules/@midwayjs/web/app/extend/context.js",
+    "start": 1782567156359,
+    "end": 1782567156359,
+    "duration": 0,
+    "pid": 23084,
+    "index": 29
+  },
+  {
+    "name": "Load extend/helper.js",
+    "start": 1782567156362,
+    "end": 1782567156448,
+    "duration": 86,
+    "pid": 23084,
+    "index": 30
+  },
+  {
+    "name": "Require(22) C:/作业/zy5/server/node_modules/egg-security/app/extend/helper.js",
+    "start": 1782567156364,
+    "end": 1782567156443,
+    "duration": 79,
+    "pid": 23084,
+    "index": 31
+  },
+  {
+    "name": "Require(23) C:/作业/zy5/server/node_modules/egg/app/extend/helper.js",
+    "start": 1782567156444,
+    "end": 1782567156445,
+    "duration": 1,
+    "pid": 23084,
+    "index": 32
+  },
+  {
+    "name": "Load app.js",
+    "start": 1782567156448,
+    "end": 1782567156590,
+    "duration": 142,
+    "pid": 23084,
+    "index": 33
+  },
+  {
+    "name": "Require(24) C:/作业/zy5/server/node_modules/egg-session/app.js",
+    "start": 1782567156449,
+    "end": 1782567156450,
+    "duration": 1,
+    "pid": 23084,
+    "index": 34
+  },
+  {
+    "name": "Require(25) C:/作业/zy5/server/node_modules/egg-security/app.js",
+    "start": 1782567156451,
+    "end": 1782567156455,
+    "duration": 4,
+    "pid": 23084,
+    "index": 35
+  },
+  {
+    "name": "Require(26) C:/作业/zy5/server/node_modules/egg-onerror/app.js",
+    "start": 1782567156456,
+    "end": 1782567156565,
+    "duration": 109,
+    "pid": 23084,
+    "index": 36
+  },
+  {
+    "name": "Require(27) C:/作业/zy5/server/node_modules/@midwayjs/web/app.js",
+    "start": 1782567156566,
+    "end": 1782567156589,
+    "duration": 23,
+    "pid": 23084,
+    "index": 37
+  },
+  {
+    "name": "Did Load in C:/作业/zy5/server/node_modules/@midwayjs/web/app.js:didLoad",
+    "start": 1782567156592,
+    "end": 1782567156783,
+    "duration": 191,
+    "pid": 23084,
+    "index": 38
+  },
+  {
+    "name": "Load Service",
+    "start": 1782567156592,
+    "end": 1782567156610,
+    "duration": 18,
+    "pid": 23084,
+    "index": 39
+  },
+  {
+    "name": "Load \"service\" to Context",
+    "start": 1782567156592,
+    "end": 1782567156610,
+    "duration": 18,
+    "pid": 23084,
+    "index": 40
+  },
+  {
+    "name": "Load Middleware",
+    "start": 1782567156610,
+    "end": 1782567156782,
+    "duration": 172,
+    "pid": 23084,
+    "index": 41
+  },
+  {
+    "name": "Load \"middlewares\" to Application",
+    "start": 1782567156610,
+    "end": 1782567156781,
+    "duration": 171,
+    "pid": 23084,
+    "index": 42
+  },
+  {
+    "name": "Load Controller",
+    "start": 1782567156782,
+    "end": 1782567156783,
+    "duration": 1,
+    "pid": 23084,
+    "index": 43
+  },
+  {
+    "name": "Load \"controller\" to Application",
+    "start": 1782567156782,
+    "end": 1782567156783,
+    "duration": 1,
+    "pid": 23084,
+    "index": 44
+  },
+  {
+    "name": "Load Router",
+    "start": 1782567156783,
+    "end": 1782567156783,
+    "duration": 0,
+    "pid": 23084,
+    "index": 45
+  },
+  {
+    "name": "Will Ready in C:/作业/zy5/server/node_modules/@midwayjs/web/app.js:willReady",
+    "start": 1782567156783,
+    "end": 1782567156806,
+    "duration": 23,
+    "pid": 23084,
+    "index": 46
+  }
+]

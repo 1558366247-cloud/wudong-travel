@@ -1,0 +1,37 @@
+<view wx:if="{{!loading}}">
+  <view class="hero">
+    <view class="hero-bg">{{route.duration}}</view>
+    <view class="hero-info">
+      <view class="hero-title">{{route.title}}</view>
+      <view class="hero-meta">{{route.departure}} → {{route.destination}}</view>
+    </view>
+    <view class="fav-btn" bindtap="toggleFav">{{favorited ? '❤️' : '🤍'}}</view>
+  </view>
+
+  <view class="container">
+    <view class="card section-card">
+      <view class="section-title">行程安排</view>
+      <block wx:for="{{itineraries}}" wx:key="itineraryId">
+        <view class="day-card">
+          <view class="day-title">📅 第{{item.day}}天</view>
+          <text>{{item.description}}</text>
+          <text wx:if="{{item.spots}}" style="color:var(--text-secondary);">\n景点：{{item.spots}}</text>
+          <text wx:if="{{item.meals}}" style="color:var(--text-secondary);">\n用餐：{{item.meals}}</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="card section-card" wx:if="{{route.notes}}">
+      <view class="section-title">⚠️ 注意事项</view>
+      <text>{{route.notes}}</text>
+    </view>
+
+    <view class="bottom-bar">
+      <view><text class="price">¥{{route.price}}</text><text style="font-size:24rpx;">/人</text></view>
+      <button class="btn-primary" bindtap="goPurchase" disabled="{{route.stock <= 0}}">
+        {{route.stock > 0 ? '立即预订（剩' + route.stock + '位）' : '已售罄'}}
+      </button>
+    </view>
+  </view>
+</view>
+<view wx:else class="loading">加载中...</view>

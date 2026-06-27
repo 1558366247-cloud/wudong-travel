@@ -1,0 +1,35 @@
+<view class="container" wx:if="{{order}}">
+  <view class="card">
+    <view class="order-detail-header">
+      <text class="order-no">{{order.orderNo}}</text>
+      <text class="status-tag">{{statusMap[order.orderStatus]}}</text>
+    </view>
+    <view class="detail-row"><text>类型</text><text>{{order.orderType === 'ticket' ? '门票' : '路线'}}</text></view>
+    <view class="detail-row"><text>商品</text><text>{{order.targetName}}</text></view>
+    <view class="detail-row"><text>票种</text><text>{{order.ticketTypeName || '-'}}</text></view>
+    <view class="detail-row"><text>单价</text><text class="price">¥{{order.unitPrice}}</text></view>
+    <view class="detail-row"><text>数量</text><text>{{order.quantity}}</text></view>
+    <view class="detail-row"><text>总金额</text><text class="price">¥{{order.totalAmount}}</text></view>
+    <view class="detail-row"><text>使用日期</text><text>{{order.useDate}}</text></view>
+    <view class="detail-row"><text>联系人</text><text>{{order.contactPhone}}</text></view>
+  </view>
+
+  <!-- 电子票 -->
+  <view class="card" wx:if="{{eTickets.length > 0 && order.orderStatus === 'paid'}}">
+    <view class="section-title">电子票（R9-02: 一票一码）</view>
+    <block wx:for="{{eTickets}}" wx:key="eTicketId">
+      <view class="eticket-item" bindtap="goETicket" data-id="{{item.eTicketId}}">
+        <text class="eticket-name">{{item.visitorName}}</text>
+        <text class="eticket-status {{item.status}}">{{item.status === 'unused' ? '未使用' : item.status === 'used' ? '已使用' : '已退款'}}</text>
+        <text class="eticket-code">{{item.qrCode}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-bar">
+    <button wx:if="{{order.orderStatus === 'pending_pay'}}" bindtap="cancelOrder">取消订单</button>
+    <button wx:if="{{order.orderStatus === 'paid' || order.orderStatus === 'completed'}}" bindtap="refundOrder">申请退款</button>
+  </view>
+</view>
+<view wx:else class="loading">加载中...</view>

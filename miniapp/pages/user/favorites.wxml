@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="tab-scroll">
+    <view class="tab-item {{type === '' ? 'active' : ''}}" data-type="" bindtap="onTabChange">全部</view>
+    <view class="tab-item {{type === 'scenic' ? 'active' : ''}}" data-type="scenic" bindtap="onTabChange">景区</view>
+    <view class="tab-item {{type === 'route' ? 'active' : ''}}" data-type="route" bindtap="onTabChange">路线</view>
+    <view class="tab-item {{type === 'guide' ? 'active' : ''}}" data-type="guide" bindtap="onTabChange">攻略</view>
+  </view>
+
+  <block wx:for="{{favorites}}" wx:key="favId">
+    <view class="card fav-item" bindtap="goTarget" data-type="{{item.targetType}}" data-id="{{item.targetId}}">
+      <view class="fav-info">
+        <text class="tag tag-primary">{{item.targetType === 'scenic' ? '景区' : item.targetType === 'route' ? '路线' : '攻略'}}</text>
+        <text>ID: {{item.targetId}}</text>
+      </view>
+      <button class="btn-outline" size="mini" data-type="{{item.targetType}}" data-id="{{item.targetId}}" catchtap="removeFav">取消收藏</button>
+    </view>
+  </block>
+
+  <view class="empty-state" wx:if="{{!loading && favorites.length === 0}}">
+    <text>暂无收藏</text>
+  </view>
+</view>

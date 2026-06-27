@@ -1,0 +1,9 @@
+.picker-btn { border: 2rpx solid #E5E5E5; border-radius: 12rpx; padding: 20rpx; background: #fff; margin-bottom: 20rpx; text-align: center; }
+.guide-card { padding: 24rpx; margin-bottom: 16rpx; }
+.guide-header { display: flex; gap: 16rpx; margin-bottom: 12rpx; }
+.guide-icon { font-size: 48rpx; }
+.guide-info { flex: 1; }
+.guide-title { font-size: 30rpx; font-weight: 500; margin-bottom: 4rpx; }
+.guide-meta { font-size: 24rpx; color: #8C8C8C; }
+.guide-footer { display: flex; gap: 20rpx; font-size: 24rpx; color: #595959; }
+.guide-views { color: #BFBFBF; }

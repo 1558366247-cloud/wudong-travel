@@ -1,0 +1,310 @@
+{
+  "koa": {
+    "port": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts"
+  },
+  "typeorm": {
+    "dataSource": {
+      "default": {
+        "type": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "host": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "port": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "username": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "password": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "database": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "synchronize": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "logging": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "entities": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+        "timezone": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts"
+      }
+    }
+  },
+  "jwt": {
+    "secret": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+    "expiresIn": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts"
+  },
+  "redis": {
+    "client": {
+      "port": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+      "host": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+      "password": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+      "db": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts"
+    }
+  },
+  "swagger": {
+    "title": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+    "description": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+    "version": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+    "termsOfService": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+    "contact": {
+      "name": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts"
+    }
+  },
+  "cors": {
+    "origin": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts",
+    "allowMethods": "C:\\作业\\zy5\\server\\src\\config\\config.default.ts"
+  },
+  "session": {
+    "maxAge": "C:\\作业\\zy5\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "C:\\作业\\zy5\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "C:\\作业\\zy5\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "C:\\作业\\zy5\\server\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "C:\\作业\\zy5\\server\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+    "csrf": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "type": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+      "useSession": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "supportedRequests": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xframe": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "C:\\作业\\zy5\\server\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "C:\\作业\\zy5\\server\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "C:\\作业\\zy5\\server\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "C:\\作业\\zy5\\server\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "C:\\作业\\zy5\\server\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "C:\\作业\\zy5\\server\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "C:\\作业\\zy5\\server\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "env": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "name": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "keys": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "version": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "description": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "build": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "start": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "test": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "@midwayjs/bootstrap": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/core": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/jwt": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/koa": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/logger": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/redis": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/swagger": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/typeorm": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/validate": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/web": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "bcryptjs": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "class-transformer": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "class-validator": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "dayjs": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "jsonwebtoken": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "mysql2": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "qrcode": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "typeorm": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "uuid": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "@midwayjs/cli": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@midwayjs/mock": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "@types/node": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "typescript": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+  "dump": {
+    "ignore": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "cacheControl": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "strict": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "depth": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "env": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "level": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "enablePerformanceTimer": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "logging": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "port": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "C:\\作业\\zy5\\server\\node_modules\\egg\\config\\config.default.js",
+  "midwayLogger": {
+    "default": {
+      "fileLogName": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+      "errorLogName": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+      "dir": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+      "auditFileDir": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+      "transports": {
+        "console": {
+          "autoColors": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+        },
+        "file": {
+          "bufferWrite": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+        },
+        "error": {
+          "bufferWrite": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+        }
+      }
+    },
+    "clients": {
+      "coreLogger": {
+        "fileLogName": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+      },
+      "appLogger": {
+        "fileLogName": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+        "aliasName": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+        "contextFormat": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+      },
+      "agentLogger": {
+        "fileLogName": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+      }
+    }
+  },
+  "egg": {
+    "dumpConfig": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+    "queryParseMode": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+    "plugins": {
+      "egg-mock": {
+        "enable": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.local.js",
+        "package": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.local.js"
+      }
+    }
+  },
+  "pluginOverwrite": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+  "alinode": {
+    "logdir": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+    "error_log": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js",
+    "packages": "C:\\作业\\zy5\\server\\node_modules\\@midwayjs\\web\\dist\\config\\config.default.js"
+  }
+}

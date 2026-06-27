@@ -1,0 +1,112 @@
+:root {
+  /* 品牌色 */
+  --color-primary: #1F5FA8;
+  --color-primary-dark: #0E3D75;
+  --color-primary-light: #E8F1FB;
+  /* 辅色 */
+  --color-secondary-orange: #E85D2F;
+  --color-secondary-green: #6B8E3D;
+  --color-secondary-gold: #D4A14B;
+  /* 中性色 */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #595959;
+  --color-text-tertiary: #8C8C8C;
+  --color-text-disabled: #BFBFBF;
+  --color-border-primary: #E5E5E5;
+  --color-border-secondary: #F0F0F0;
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F7F8FA;
+  --color-bg-tertiary: #FAFAFA;
+  /* 功能色 */
+  --color-success: #52C41A;
+  --color-warning: #FAAD14;
+  --color-error: #FF4D4F;
+  --color-info: #1F5FA8;
+  /* 阴影 */
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --shadow-deep: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', '阿里巴巴普惠体', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  line-height: 1.6;
+}
+
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { color: var(--color-primary-dark); }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 页面标题区 */
+.page-hero {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: #fff;
+  padding: 48px 0;
+  margin-bottom: 32px;
+}
+.page-hero h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.page-hero p { font-size: 16px; opacity: 0.85; }
+
+/* 卡片 */
+.card {
+  background: var(--color-bg-primary);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+/* 价格 */
+.price { color: var(--color-secondary-orange); font-weight: 700; font-size: 20px; }
+.price-symbol { font-size: 14px; }
+.market-price { color: var(--color-text-tertiary); text-decoration: line-through; font-size: 13px; margin-left: 8px; }
+
+/* 按钮 */
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: #3B7BC5; }
+.btn-primary:active { background: var(--color-primary-dark); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 标签 */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.tag-primary { background: var(--color-primary-light); color: var(--color-primary); }
+.tag-orange { background: #FFF1EA; color: var(--color-secondary-orange); }
+.tag-green { background: #F6FFED; color: var(--color-success); }
+.tag-gold { background: #FFFBF0; color: var(--color-secondary-gold); }

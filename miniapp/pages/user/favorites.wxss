@@ -1,0 +1,5 @@
+.tab-scroll { white-space: nowrap; padding: 16rpx 0; margin-bottom: 16rpx; }
+.tab-item { display: inline-block; padding: 12rpx 28rpx; font-size: 26rpx; border-radius: 32rpx; margin-right: 12rpx; background: #F0F0F0; color: #595959; }
+.tab-item.active { background: #1F5FA8; color: #fff; }
+.fav-item { display: flex; justify-content: space-between; align-items: center; padding: 24rpx; margin-bottom: 16rpx; }
+.fav-info { display: flex; align-items: center; gap: 12rpx; font-size: 28rpx; }

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>乌东文旅 - 行·线路订票 Demo</title>
+<style>
+:root {
+  --primary: #1F5FA8; --primary-light: #E8F1FB;
+  --orange: #E85D2F; --green: #6B8E3D;
+  --text: #1A1A1A; --text2: #595959; --text3: #8C8C8C;
+  --bg: #F7F8FA; --white: #FFFFFF; --border: #E5E5E5;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'PingFang SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--text); }
+
+.header {
+  background: linear-gradient(135deg, #0E3D75, var(--primary));
+  color: #fff; padding: 24px 0; text-align: center;
+}
+.header h1 { font-size: 28px; margin-bottom: 4px; }
+.header p { opacity: 0.8; font-size: 14px; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+/* 状态栏 */
+.status-bar {
+  background: var(--white); border-radius: 12px; padding: 16px 24px;
+  margin-bottom: 24px; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 12px;
+}
+.status-dot { width: 12px; height: 12px; border-radius: 50%; }
+.status-dot.online { background: var(--green); }
+.status-dot.offline { background: #FF4D4F; }
+
+/* 功能卡片 */
+.section-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.card {
+  background: var(--white); border-radius: 12px; padding: 20px;
+  box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card h3 { font-size: 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.card p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+.card .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+.tag-get { background: #E8F1FB; color: var(--primary); }
+.tag-post { background: #F6FFED; color: var(--green); }
+.tag-put { background: #FFF7E6; color: #FAAD14; }
+.card .btn { display: inline-block; margin-top: 12px; padding: 6px 16px; border-radius: 6px; font-size: 12px; cursor: pointer; border: none; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: #3B7BC5; }
+
+/* 结果面板 */
+.output-panel {
+  background: #1E1E1E; border-radius: 12px; padding: 20px; margin-top: 24px;
+  color: #D4D4D4; font-family: 'Consolas','Courier New',monospace; font-size: 13px;
+  white-space: pre-wrap; max-height: 500px; overflow-y: auto; line-height: 1.5;
+}
+.output-panel .key { color: #9CDCFE; }
+.output-panel .string { color: #CE9178; }
+.output-panel .number { color: #B5CEA8; }
+
+/* 业务流程图 */
+.flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 16px 0; }
+.flow-step { background: var(--white); border: 2px solid var(--primary); border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
+.flow-arrow { color: var(--primary); font-size: 20px; }
+
+.price { color: var(--orange); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏔️ 乌东文旅 · 行·线路订票</h1>
+  <p>第4组 | 景区门票 · 路线套餐 · 电子票 · 交通攻略</p>
+</div>
+
+<div class="container">
+  <!-- 服务器状态 -->
+  <div class="status-bar" id="statusBar">
+    <div class="status-dot offline" id="statusDot"></div>
+    <span id="statusText">检测服务器状态...</span>
+    <span style="margin-left:auto;font-size:13px;color:var(--text3);" id="apiUrl">API: http://localhost:7001</span>
+  </div>
+
+  <!-- 业务流程演示 -->
+  <div class="section-title">🔄 完整业务流程</div>
+  <div class="flow">
+    <div class="flow-step">1. 浏览景区</div><span class="flow-arrow">→</span>
+    <div class="flow-step">2. 选择票种</div><span class="flow-arrow">→</span>
+    <div class="flow-step">3. 填写信息</div><span class="flow-arrow">→</span>
+    <div class="flow-step">4. 支付</div><span class="flow-arrow">→</span>
+    <div class="flow-step">5. 生成电子票</div><span class="flow-arrow">→</span>
+    <div class="flow-step">6. 扫码核销</div>
+  </div>
+  <div style="font-size:13px;color:var(--text3);margin-bottom:24px;">
+    核心规则：R9-01 有效期管理 | R9-02 一票一码 | R9-03 提前1天购买 | R9-04 实名制 | R9-05 营业时间核销
+  </div>
+
+  <!-- API接口卡片 -->
+  <div class="section-title">📡 API 接口测试</div>
+  <div class="card-grid" id="apiCards"></div>
+
+  <!-- 输出区域 -->
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-top:32px;margin-bottom:8px;">
+    <div class="section-title" style="margin-bottom:0;">📤 响应结果</div>
+    <button class="btn btn-primary" onclick="clearOutput()" style="font-size:12px;">清空</button>
+  </div>
+  <div class="output-panel" id="output">点击上方 API 卡片进行测试，结果将显示在这里...</div>
+</div>
+
+<script>
+const BASE = 'http://localhost:7001';
+
+// API 定义
+const APIS = [
+  { name:'景区列表', method:'GET', path:'/api/scenic/list?page=1&pageSize=5', tag:'tag-get', desc:'获取景区列表，支持分页和关键词搜索' },
+  { name:'景区详情', method:'GET', path:'/api/scenic/detail/1', tag:'tag-get', desc:'乌东苗寨详情+可售票种' },
+  { name:'票种列表', method:'GET', path:'/api/ticket-type/list?scenicId=1', tag:'tag-get', desc:'乌东苗寨的所有票种' },
+  { name:'路线列表', method:'GET', path:'/api/route/list?duration=一日游', tag:'tag-get', desc:'按天数筛选路线套餐' },
+  { name:'路线详情', method:'GET', path:'/api/route/detail/1', tag:'tag-get', desc:'路线详情+行程安排' },
+  { name:'交通攻略', method:'GET', path:'/api/guide/list', tag:'tag-get', desc:'各地出发的交通攻略' },
+  { name:'出发地列表', method:'GET', path:'/api/guide/departures', tag:'tag-get', desc:'获取所有出发地' },
+  { name:'订单列表', method:'GET', path:'/api/order/list', tag:'tag-get', desc:'我的订单列表' },
+  { name:'数据看板', method:'GET', path:'/api/statistics/dashboard', tag:'tag-get', desc:'后台数据统计' },
+  { name:'购买门票', method:'POST', path:'/api/order/ticket/create', tag:'tag-post', desc:'创建门票订单', body:{"ticketTypeId":1,"quantity":2,"useDate":"2026-07-01","visitors":'[{"name":"张三","idCard":"5226xxx","phone":"138xxx"}]',"contactPhone":"13800001111"} },
+  { name:'支付回调', method:'POST', path:'/api/order/pay-callback', tag:'tag-post', desc:'模拟支付成功', body:{"orderNo":"待填入","transactionId":"TEST_001"} },
+  { name:'核销电子票', method:'POST', path:'/api/order/verify', tag:'tag-post', desc:'扫码核销电子票（R9-02/R9-05）', body:{"qrCode":"待填入"} },
+];
+
+// 渲染卡片
+const cardsDiv = document.getElementById('apiCards');
+APIS.forEach((api, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.onclick = () => callAPI(i);
+  card.innerHTML = `
+    <h3><span class="${api.tag}" style="padding:2px 8px;border-radius:4px;">${api.method}</span> ${api.name}</h3>
+    <p>${api.desc}</p>
+    <p style="font-size:12px;color:var(--text3);margin-top:4px;font-family:monospace;">${api.path}</p>
+    <button class="btn btn-primary">▶ 测试</button>
+  `;
+  cardsDiv.appendChild(card);
+});
+
+// 检测服务器
+async function checkServer() {
+  const dot = document.getElementById('statusDot');
+  const text = document.getElementById('statusText');
+  try {
+    const res = await fetch(`${BASE}/api/scenic/list?page=1&pageSize=1`);
+    if (res.ok) {
+      dot.className = 'status-dot online';
+      text.textContent = '🟢 Python 演示服务器运行中 - 所有API可用';
+    }
+  } catch(e) {
+    dot.className = 'status-dot offline';
+    text.innerHTML = '🔴 服务器未启动 - 请在终端运行 <code style="background:#eee;padding:2px 6px;border-radius:3px;">python run_demo.py</code> 然后刷新页面';
+  }
+}
+checkServer();
+setInterval(checkServer, 5000);
+
+// 调用API
+async function callAPI(index) {
+  const api = APIS[index];
+  const output = document.getElementById('output');
+  output.textContent = `⏳ 正在请求 ${api.method} ${api.path}...`;
+
+  try {
+    const options = { method: api.method, headers: {'Content-Type':'application/json'} };
+    if (api.body) {
+      // 如果body中有"待填入"，提示用户
+      const bodyStr = JSON.stringify(api.body);
+      if (bodyStr.includes('待填入')) {
+        output.textContent = `⚠️ 此接口需要先执行"购买门票"获取订单号，再将订单号填入请求体中\n\n请求体:\n${JSON.stringify(api.body, null, 2)}`;
+        return;
+      }
+      options.body = bodyStr;
+    }
+
+    const res = await fetch(`${BASE}${api.path}`, options);
+    const data = await res.json();
+
+    output.textContent = `✅ ${res.status} ${api.method} ${api.path}\n\n${JSON.stringify(data, null, 2)}`;
+
+    // 如果这是"购买门票"的响应，自动更新支付回调的订单号
+    if (api.name === '购买门票' && data.orderNo) {
+      APIS[10].body.orderNo = data.orderNo;
+      // 重建第11个卡片
+      updateCard(10);
+    }
+    // 如果是支付回调成功，更新核销的票号
+    if (api.name === '支付回调') {
+      // 获取最新电子票
+      try {
+        const tRes = await fetch(`${BASE}/api/e-ticket/list`);
+        const tickets = await tRes.json();
+        if (Array.isArray(tickets) && tickets.length > 0) {
+          APIS[11].body.qrCode = tickets[tickets.length-1].qrCode;
+          updateCard(11);
+        }
+      } catch(e) {}
+    }
+  } catch(e) {
+    output.textContent = `❌ 请求失败: ${e.message}\n\n请确认服务器已启动:\n  python run_demo.py`;
+  }
+}
+
+function updateCard(index) {
+  const cards = cardsDiv.querySelectorAll('.card');
+  if (cards[index]) {
+    const api = APIS[index];
+    cards[index].querySelector('p:last-of-type').textContent = api.path;
+  }
+}
+
+function clearOutput() {
+  document.getElementById('output').textContent = '点击上方 API 卡片进行测试，结果将显示在这里...';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="card order-summary">
+    <view class="summary-row"><text>{{title}}</text></view>
+    <view class="summary-row"><text class="price">¥{{price}} × {{quantity}}人 = ¥{{totalAmount}}</text></view>
+  </view>
+
+  <view class="card form-card">
+    <view class="form-item">
+      <text class="form-label">出发日期 (R9-03: 须提前1天)</text>
+      <picker mode="date" value="{{useDate}}" bindchange="onDateChange">
+        <view class="form-picker">{{useDate || '请选择日期'}}</view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="form-label">出行人数 (剩余{{stock}}位)</text>
+      <input class="form-input" type="number" value="{{quantity}}" bindinput="onQuantityChange" />
+    </view>
+  </view>
+
+  <!-- 游客信息 R9-04 -->
+  <view class="card form-card" wx:for="{{visitors}}" wx:key="index">
+    <view class="visitor-title">游客 {{index + 1}}</view>
+    <view class="form-item"><text class="form-label">姓名 *</text><input class="form-input" placeholder="游客姓名" value="{{item.name}}" data-index="{{index}}" data-field="name" bindinput="onVisitorChange" /></view>
+    <view class="form-item"><text class="form-label">身份证号 *</text><input class="form-input" placeholder="身份证号" value="{{item.idCard}}" data-index="{{index}}" data-field="idCard" bindinput="onVisitorChange" /></view>
+    <view class="form-item"><text class="form-label">手机号</text><input class="form-input" placeholder="选填" value="{{item.phone}}" data-index="{{index}}" data-field="phone" bindinput="onVisitorChange" /></view>
+  </view>
+
+  <view class="card form-card">
+    <view class="form-item"><text class="form-label">联系人手机 *</text><input class="form-input" type="number" placeholder="接收通知" value="{{contactPhone}}" bindinput="onPhoneChange" /></view>
+  </view>
+
+  <button class="btn-primary submit-btn" bindtap="submitOrder" loading="{{submitting}}">确认支付 ¥{{totalAmount}}</button>
+  <view class="tips">R9-03: 出发前3天以上可免费退，出发前3天内不可退</view>
+</view>
